@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+.d {
+  &-none {
+    display: none !important;
+  }
+  &-block {
+    display: block !important;
+  }
+}
+
+.react-form {
+  max-width: 660px;
+  display: block;
+  margin: 50px auto;
+  font-size: 16px;
+  form {
+    display: block;
+  }
+  input {
+    width: 100%;
+    border: 1px solid #000;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    &[type=submit] {
+      background: #0c0c0c;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.2s ease;
+      font-weight: 700;
+      &:hover {
+        background: transparent;
+        color: #0c0c0c;
+      }
+    }
+  }
+}
+
+.react-form-notice {
+  text-align: center;
+}
+
+.all-list {
+  margin: 0 0 30px;
+  table {
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #000;
+    td {
+      border: 1px solid #000;
+      padding: 5px 7px;
+    }
+    thead {
+      td {
+        background: #dedede;
+      }
+    }
+  }
+}

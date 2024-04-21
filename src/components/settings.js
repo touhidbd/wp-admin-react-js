@@ -17,7 +17,7 @@ const Settings = () => {
 
     useEffect(() => {
         axios.get(url).then((res) => {
-            setApiData(res.data);
+            setApiData(res.data.results);
             // console.log(res.data);
         });
     }, []);
@@ -53,7 +53,7 @@ const Settings = () => {
                     setFormNotice(Message.message);
                     if(Message.success) {
                         axios.get(url).then((res) => {
-                            setApiData(res.data);
+                            setApiData(res.data.results);
                         });
                         setTableList("d-block");
                     }

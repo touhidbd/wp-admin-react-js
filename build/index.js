@@ -55,7 +55,7 @@ const Settings = () => {
   const url = `${appLocalizer.apiUrl}/wprest/v1/settings`;
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     axios__WEBPACK_IMPORTED_MODULE_1__["default"].get(url).then(res => {
-      setApiData(res.data);
+      setApiData(res.data.results);
       // console.log(res.data);
     });
   }, []);
@@ -89,7 +89,7 @@ const Settings = () => {
           setFormNotice(Message.message);
           if (Message.success) {
             axios__WEBPACK_IMPORTED_MODULE_1__["default"].get(url).then(res => {
-              setApiData(res.data);
+              setApiData(res.data.results);
             });
             setTableList("d-block");
           }
